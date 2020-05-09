@@ -8,13 +8,16 @@ interface CreepMemory {
 }
 
 interface Memory {
+  [arg: string]: any;
   uuid: number;
   log: any;
-  stats: {name: Statistics};
+  stats: Statistics;
+  active: boolean;
 }
 
 interface Statistics {
-  iterationStartAt: number;
+  iterationStartAtMillis: number;
+  iterationStartAtTick: number;
   score: number;
 }
 
